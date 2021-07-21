@@ -1,0 +1,83 @@
+body {
+    background-color: #e5e5e5;
+}
+
+.top-bar {
+    height: 92px;
+    width: 100%;
+
+    background-color: #CF2B2B;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.top-container {
+    margin-left: 21px;
+}
+
+.options {
+    display: flex;
+
+    overflow: hidden;
+    overflow-x: scroll;
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.options::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.options {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.option {
+    width: 172px;
+    height: 216px;
+
+    margin-left: 16px;
+
+    background-color: #fff;
+
+    border-radius: 9px;
+}
+
+.menu {
+    margin: 24px 0 24px 16px;
+}
+.container{
+    margin: 116px 0;
+}
+.button-bar{
+    height: 92px;
+    width: 100%;
+
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.send-request{
+    width: 364px;
+    height:61px;
+
+    border-radius: 50px;
+
+    background-color: #cbcbcb;
+
+}
