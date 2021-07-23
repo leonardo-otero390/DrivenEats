@@ -8,6 +8,10 @@
     <title>DrivenEats</title>
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,18 +19,24 @@
     <div class="top-bar">
 
         <div class="top-container">
-            <h1>DrivenEats</h1>
-            <h4>Sua comida em 6 minutos</h4>
+            <h1 class="app-name">DrivenEats</h1>
+            <h3 class="app-copy">Sua comida em 6 minutos</h3>
         </div>
 
     </div>
     <div class="container">
         <div class="menu">
-            <h2>Primeiro seu prato</h2>
+            <h2 class="menu-name">Primeiro seu prato</h2>
 
             <ul class="options">
                 <li>
-                    <div class="option">Option</div>
+                    <div class="option">
+                        <img src="/images/burguer.jpg" alt="burguer">
+                        <h4 class="option-name"> <strong> Burguinho top</strong></h4>
+                        <p class="option-description"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <h4 class="option-price"><strong> Price</strong></h4>
+                    </div>
+
                 </li>
                 <li>
                     <div class="option">Option</div>
@@ -76,7 +86,7 @@
     </div>
 
     <div class="button-bar">
-        <button class="send-request"></button>
+        <button class="send-request"><p>Selecione os 3 itens para fechar o pedido</p></button>
     </div>
 </body>
 
