@@ -30,6 +30,7 @@ p{
     width: 100%;
 
     background-color: #CF2B2B;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     display: flex;
     align-items: center;
@@ -63,28 +64,17 @@ p{
 
     overflow: hidden;
     overflow-x: scroll;
-
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.options::-webkit-scrollbar {
-    display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.options {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
 .option {
-    width: 172px;
+    min-width: 172px;
     height: 216px;
 
     margin-right: 16px;
 
     background-color: #fff;
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.15);
 
     border-radius: 9px;
 
@@ -134,5 +124,19 @@ p{
 }
 .send-request p{
     font-size: 20px;
-    margin: 8px;
+}
+
+@media (max-width: 600px) {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+.options::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.options {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
 }
