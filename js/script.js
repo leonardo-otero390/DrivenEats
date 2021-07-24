@@ -1,11 +1,16 @@
 
+let mealPrice,drinkPrice,dessertPrice;
+let mealName = null,drinkName = null,dessertName = null;
+
 function isItReady() {
-    if (verifyMeal !== null) {
-        if (verifyDrink !== null) {
-            if (verifyDessert !== null) {
+    if (mealName !== null) {
+        if (drinkName !== null) {
+            if (dessertName !== null) {
                 const sendReady = document.querySelector(".send-request");
                 sendReady.classList.add("send-ready");
                 sendReady.innerHTML = "Fechar pedido";
+                let total = (mealPrice + drinkPrice + dessertPrice).toFixed(2).toString().replace(".",",");
+                sendMessage(total);
             }
         }
     }
@@ -16,7 +21,8 @@ function selectMealItem(optionMealSelected) {
         verify.classList.remove("selected");
     }
     optionMealSelected.classList.toggle("selected");
-    verifyMeal = document.querySelector(".meal .selected");
+    mealName = optionMealSelected.querySelector(".option-name strong").innerHTML;
+    mealPrice = Number (optionMealSelected.querySelector(".option-price span").innerHTML.replace(",","."));    
     isItReady();
 }
 function selectDrinkItem(optionDrinkSelected) {
@@ -25,7 +31,8 @@ function selectDrinkItem(optionDrinkSelected) {
         verify.classList.remove("selected");
     }
     optionDrinkSelected.classList.toggle("selected");
-    verifyDrink = document.querySelector(".drink .selected");
+    drinkName = optionDrinkSelected.querySelector(".option-name strong").innerHTML;
+    drinkPrice = Number(optionDrinkSelected.querySelector(".option-price span").innerHTML.replace(",","."));
     isItReady();
 }
 function selectDessertItem(optionDessertSelected) {
@@ -34,6 +41,19 @@ function selectDessertItem(optionDessertSelected) {
         verify.classList.remove("selected");
     }
     optionDessertSelected.classList.toggle("selected");
-    verifyDessert = document.querySelector(".dessert .selected");
+    dessertName = optionDessertSelected.querySelector(".option-name strong").innerHTML;
+    dessertPrice = Number(optionDessertSelected.querySelector(".option-price span").innerHTML.replace(",","."));
     isItReady();
+}
+function sendMessage(total){
+        let aButton = document.querySelector(".button-bar");
+        let buttonHTML = aButton.innerHTML;
+        let message =  `Olá, gostaria de fazer o pedido:
+        - Prato: ${mealName}
+        - Bebida: ${drinkName}
+        - Sobremesa: ${dessertName}
+        Total: R$ ${total}`;
+        let URI = "https://wa.me/5567992727452?text=" + encodeURIComponent(message);
+        aButton.innerHTML = `<a target="_blank" href="${URI}">${buttonHTML}</a>`;
+
 }
