@@ -47,6 +47,10 @@ function selectDessertItem(optionDessertSelected) {
     dessertPrice = Number(optionDessertSelected.querySelector(".option-price span").innerHTML.replace(",", "."));
     isItReady();
 }
+function confirmRequest() {
+    clientName = prompt("Insira seu nome:");
+    clientAddress = prompt("Insira seu endereço:");
+}
 function sendMessage(total) {
     confirmRequest();
     let message = `Olá, gostaria de fazer o pedido:
@@ -60,10 +64,6 @@ function sendMessage(total) {
     console.log(message);
     let URI = "https://wa.me/5567992727452?text=" + encodeURIComponent(message);
     window.open(URI)
-}
-function confirmRequest() {
-    clientName = prompt("Diga seu nome pu favoh");
-    clientAddress = prompt("Onde cê táah?");
 }
 function reviewText() {
     let stringMealPrice = mealPrice.toFixed(2).toString().replace(".", ",");
@@ -91,10 +91,8 @@ function reviewText() {
 function showConfirmScreen() {
     reviewText();
     if (readyToAsk === true) {
-
         let element = document.querySelector(".hidden");
         element.classList.remove("hidden");
-
     }
 }
 function hideConfirmScreen() {
