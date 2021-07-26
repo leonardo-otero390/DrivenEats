@@ -96,7 +96,7 @@
                     <img src="/images/drinks/mana-health.jpg" alt="mana-health-potions">
                     <h4 class="option-name"> <strong> Poção de vida e mana</strong></h4>
                     <p class="option-description"> Depois de bebê-las ficará pronto para a próxima batalha </p>
-                    <h4 class="option-price"><strong> R$ <span>1O,00</span></strong>
+                    <h4 class="option-price"><strong> R$ <span>10,00</span></strong>
                         <ion-icon name="checkmark-circle-sharp"></ion-icon>
                     </h4>
                 </li>
@@ -146,14 +146,34 @@
     </div>
 
     <div class="button-bar">
-        <button class="send-request" onclick="sendMessage(total);">
+        <button class="send-request" onclick="showConfirmScreen();">
             Selecione os 3 itens <br> para fechar o pedido
         </button>
     </div>
-    <div class="confim-screen hidden">
+    <div class="confirm-screen hidden">
         <div class="confirm-background"></div>
         <div class="confirm-square">
-            
+            <h2 class="confirm-title"><strong>confirme seu pedido</strong></h2>
+            <div class="review">
+                <!-- <div class="meal">
+                    <h2>mealName</h2>
+                    <h2>mealPrice</h2>
+                </div>
+                <div class="drink">
+                    <h2>drinkName</h2>
+                    <h2>drinkPrice</h2>
+                </div>
+                <div class="dessert">
+                    <h2>dessertName</h2>
+                    <h2>dessertPrice</h2>
+                </div>
+                <div class="total">
+                        <h2> <strong> TOTAL/strong></h2>
+                        <h2> <strong> total</strong></h2>
+                    </div>
+            </div> -->
+            <button onclick="sendMessage(total);"> <strong> Tudo certo, pode pedir! </strong></button>
+            <h2 onclick="hideConfirmScreen();">Cancelar</h2>
         </div>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
